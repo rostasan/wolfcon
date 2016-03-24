@@ -58,7 +58,7 @@ function UserController( userService, $mdSidenav, $mdBottomSheet, $log) {
 
         $mdBottomSheet.show({
             controllerAs  : "cp",
-            templateUrl   : './src/users/view/contactSheet.html',
+            templateUrl   : './views/contactSheet.html',
             controller    : [ '$mdBottomSheet', ContactSheetController],
             parent        : angular.element(document.getElementById('content'))
         }).then(function(clickedItem) {
@@ -71,10 +71,10 @@ function UserController( userService, $mdSidenav, $mdBottomSheet, $log) {
         function ContactSheetController( $mdBottomSheet ) {
             this.user = selectedUser;
             this.actions = [
-                { name: 'Phone'       , icon: 'phone'       , icon_url: 'assets/svg/phone.svg'},
-                { name: 'Twitter'     , icon: 'twitter'     , icon_url: 'assets/svg/twitter.svg'},
-                { name: 'Google+'     , icon: 'google_plus' , icon_url: 'assets/svg/google_plus.svg'},
-                { name: 'Hangout'     , icon: 'hangouts'    , icon_url: 'assets/svg/hangouts.svg'}
+                { name: 'Phone'       , icon: 'phone'       , icon_url: 'images/svg/phone.svg'},
+                { name: 'Twitter'     , icon: 'twitter'     , icon_url: 'images/svg/twitter.svg'},
+                { name: 'Google+'     , icon: 'google_plus' , icon_url: 'images/svg/google_plus.svg'},
+                { name: 'Hangout'     , icon: 'hangouts'    , icon_url: 'images/svg/hangouts.svg'}
             ];
             this.contactUser = function(action) {
                 // The actually contact process has not been implemented...

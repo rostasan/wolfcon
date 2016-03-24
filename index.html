@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="css/view.css" />
+    <link rel="stylesheet" href="assets/css/view.css" />
     <title>WolfCon Contacts</title>
 
     <style type="text/css">
@@ -17,7 +17,7 @@
 
 </head>
 <body ng-app="wolfApp" layout="row" ng-controller="UserController as ul" ng-cloak>
-Hello
+
     <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
                 md-component-id="left"
                 ng-click="ul.toggleList()" aria-label="Show User List"
@@ -45,9 +45,13 @@ Hello
             <md-button id="main" class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
                 <md-icon md-svg-icon="menu" ></md-icon>
             </md-button>
-            <h3>Angular Material - Starter App</h3>
-        </md-toolbar>
+            <h3>Angular Material - Starter App
+            <md-icon md-svg-icon="{{ul.wolfcon.avatar}}" class="avatar"></md-icon></h3>
 
+        </md-toolbar>
+        <object type="image/svg+xml" data="images/svg/Wolfcon.svg" class="logog">
+            <img src="images/WolfCon.png" />
+        </object>
         <md-content flex id="content">
             <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
             <h2>{{ul.selected.name}}</h2>
@@ -66,9 +70,7 @@ Hello
 
 
 
-        <object type="image/svg+xml" data="images/Wolfcon.svg" class="logog">
-            <img src="images/WolfCon.svg" />
-        </object>
+
 <ng-view></ng-view>
 
 <script src="bower_components/angular/angular.js"></script>
