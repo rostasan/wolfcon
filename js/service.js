@@ -56,6 +56,42 @@
         return $q.when(users);
       }
     };
-  }
+  };
+//    .controller('tasksController', function($scope, $http) {
+//        getTask(); // Load all available tasks
+//        function getTask(){
+//            $http.post("../AngularTask/ajax/getTask.php").success(function(data){
+//                $scope.tasks = data;
+//            });
+//        };
+//        $scope.addTask = function (task) {
+//            $http.post("../AngularTask/ajax/addTask.php?task="+task).success(function(data){
+//                getTask();
+//                $scope.taskInput = "";
+//            });
+//        };
+//        $scope.deleteTask = function (task) {
+//            if(confirm("Are you sure to delete this line?")){
+//                $http.post("../AngularTask/ajax/deleteTask.php?taskID="+task).success(function(data){
+//                    getTask();
+//                });
+//            }
+//        };
+//
+//        $scope.toggleStatus = function(item, status, task) {
+//            if(status=='2'){status='0';}else{status='2';}
+//            $http.post("../AngularTask/ajax/updateTask.php?taskID="+item+"&status="+status).success(function(data){
+//                getTask();
+//            });
+//        };
+//
+//    });
+//    .factory("ContactService", "$http","$scope", "$q", function ContactService($http, $scope, $q){
+//            this.CatID = [];
+//            this.url = 'global/mysql_connect.php';
+//            this.fields = ['LName', 'FName', 'Address', 'City'];
+//            $q.when(this.getCatID($http)).then(function(data){ this.CatID = data; });
+//        }
+//    )
 
 })();

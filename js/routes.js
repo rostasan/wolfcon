@@ -9,4 +9,14 @@ angular
                 templateUrl: 'views/home.html'
 
             })
-    })
+            .when('/Contacts', {
+                templateUrl: 'views/contact.html',
+                controller: 'contactController'
+            })
+            .when('/users', {
+                templateUrl: "views/users.html"
+            })
+            .when('/WolfCon', {
+                templateUrl: "views/contact.html"
+            })
+    });
